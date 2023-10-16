@@ -7,7 +7,7 @@ function saludar(){
     }
 }
 
-function mostrarCategoriasYProductos() {
+function mostrarCategoriasYProductos(){
     const categorias = [
         "Accesorios", 
         "Belleza", 
@@ -15,7 +15,7 @@ function mostrarCategoriasYProductos() {
     ];
     const productos = {
         Accesorios: [
-            { nombre: "Billetera Rosas", precio: 1500 },
+            { nombre: "Billetera Rosas", precio: 1600 },
             { nombre: "Paraguas Estampados", precio: 2100 },
             { nombre: "Organizador de Viaje", precio: 1800 },
         ],
@@ -31,27 +31,38 @@ function mostrarCategoriasYProductos() {
         ],
     };
 
-    const seleccionCategoria = Number(prompt("Elige una categoría:\n1) Accesorios\n2) Belleza\n3) Manicuría"));
+    const seleccionCategoria = Number(prompt("Elige una categoría:\n1)Accesorios \n2)Belleza \n3)Manicuría"));
 
-    if (seleccionCategoria >= 1 && seleccionCategoria <= categorias.length) {
+    if (seleccionCategoria >= 1 && seleccionCategoria <= categorias.length){
         const categoriaElegida = categorias[seleccionCategoria - 1];
-        alert(`Has elegido la categoría: ${categoriaElegida}`);
+            alert(`Has elegido la categoría: ${categoriaElegida}`);
 
         const productosCategoria = productos[categoriaElegida];
+            alert(`Productos en la categoría ${categoriaElegida}:`);
+        productosCategoria.forEach((producto, index) => {
+            alert(`
+            ${index + 1}) ${producto.nombre} 
+            Precio: ${producto.precio}
+            `);
+        });
 
-        const seleccionProducto = Number(prompt(`Seleccione el producto a buscar "${categoriaElegida}":\n${productosCategoria.map((producto, index) => `${index + 1}) ${producto.nombre}`).join("\n")}`));
+        const precioMinimo = Number(prompt("Filtrar productos por precio minimo. Ingresa el precio"));
+        const productosFiltrados = productosCategoria.filter(producto => producto.precio <= precioMinimo);
 
-        if (seleccionProducto >= 1 && seleccionProducto <= productosCategoria.length) {
-            const productoElegido = productosCategoria[seleccionProducto - 1];
-                alert(`Has elegido el producto: ${productoElegido.nombre} - Precio: ${productoElegido.precio}`);
-        } else {
-            alert("Selección de producto no encontrado. Por favor, elige una opción correcta.");
+        if (productosFiltrados.length > 0) {
+                alert("Productos que cumplen con el precio:");
+            productosFiltrados.forEach(producto => {
+                alert(`
+                    Nombre: ${producto.nombre} 
+                    Precio: ${producto.precio}
+                    `);
+            });
+        } else{
+            alert("No hay productos que cumplan con el filtro de ese precio");
         }
-
-    } else {
-        alert("Selección de categoría no encontrado. Por favor, elige una categoría correcta.");
+    } else{
+        alert("Selección de categoría no encontrado. Por favor, elige una categoría correcta");
     }
-    
     finalizar();
 }
 
