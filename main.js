@@ -1,8 +1,3 @@
-const categorias = [
-    "Accesorios", 
-    "Belleza", 
-    "Manicuría"
-];
 const productos = {
     Accesorios: [
         { nombre: "Billetera Rosas", precio: 1600 },
@@ -27,6 +22,17 @@ function agregarAlCarrito(categoria, productoIndex) {
     const producto = productos [categoria] [productoIndex];
     carrito.push(producto);
     actualizarCarrito();
+    alert(`
+    Se ha agregado ${producto.nombre} al carrito.
+    `);
+}
+
+function eliminarDelCarrito(index) {
+    carrito.splice(index, 1);
+    actualizarCarrito();
+    alert(`
+    Se ha eliminado ${productoEliminado.nombre} del carrito.
+    `);
 }
 
 function actualizarCarrito(){
@@ -48,11 +54,12 @@ function actualizarCarrito(){
 function vaciarCarrito () {
     carrito = [];
     actualizarCarrito();
+    alert("Esta seguro de vaciar el carrito");
 }
 
 const productosDiv = document.getElementById("productos");
 
-categorias.forEach((categoria, categoriaIndex) => {
+for (const categoria in productos){
     const categoriaDiv = document.createElement("div");
     categoriaDiv.innerHTML = `
     <h1>${categoria}</h1>
@@ -60,15 +67,15 @@ categorias.forEach((categoria, categoriaIndex) => {
     productosDiv.appendChild(categoriaDiv);
 
     productos[categoria].forEach((productos, productoIndex) => {
-    const productosDiv = document.createElement("div");
-    productosDiv.innerHTML = `
-        <h3>${productos.nombre}</h3>
-        <b>${productos.precio}</b>
-        <button onclick="agregarAlCarrito('${categoria}', ${productoIndex})">Agregar al Carrito</button>
-    `;
-    categoriaDiv.appendChild(productosDiv)
+        const productosDiv = document.createElement("div");
+        productosDiv.innerHTML = `
+            <h3>${productos.nombre}</h3>
+            <b>${productos.precio}</b>
+            <button onclick="agregarAlCarrito('${categoria}', ${productoIndex})">Agregar al Carrito</button>
+        `;
+        categoriaDiv.appendChild(productosDiv)
     });
-});
+};
 
 const vaciarCarritoButton = document.getElementById("vaciar-carrito");
 vaciarCarritoButton.addEventListener("click", vaciarCarrito);
