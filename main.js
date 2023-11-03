@@ -28,6 +28,7 @@ function agregarAlCarrito(categoria, productoIndex) {
 }
 
 function eliminarDelCarrito(index) {
+    const productoEliminado = carrito[index];
     carrito.splice(index, 1);
     actualizarCarrito();
     alert(`
