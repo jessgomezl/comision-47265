@@ -23,7 +23,7 @@ function agregarAlCarrito(categoria, productoIndex) {
     carrito.push(producto);
     actualizarCarrito();
     alert(`
-    Se ha agregado ${producto.nombre} al carrito.
+    Desea agregar ${producto.nombre} al carrito.
     `);
 }
 
@@ -31,25 +31,33 @@ function eliminarDelCarrito(index) {
     carrito.splice(index, 1);
     actualizarCarrito();
     alert(`
-    Se ha eliminado ${productoEliminado.nombre} del carrito.
+    Desea eliminar ${productoEliminado.nombre} del carrito.
     `);
 }
 
 function actualizarCarrito(){
-    const carritoDiv = document.getElementById("carrito");
-    carritoDiv.innerHTML = "";
+    const carritoActualizado = document.getElementById("carrito");
+    carritoActualizado.innerHTML = "";
 
     carrito.forEach((productos, index) => {
-        const itemDiv = document.createElement("div");
-        itemDiv.innerHTML = `
+        const cargarProductos = document.createElement("div");
+        cargarProductos.innerHTML = `
             <h2>${productos.nombre}</h2>
-            <b>${productos.precio}</b>
+            <b>$${productos.precio}</b>
             <button onclick="eliminarDelCarrito(${index})">Eliminar</button>
         `;
-        carritoDiv.appendChild(itemDiv);
+        carritoActualizado.appendChild(cargarProductos);
     });
     localStorage.setItem("carrito",JSON.stringify(carrito));
 }
+
+function calcularTotalCarrito() {
+    const total = carrito.reduce((accumulator, producto) => accumulator + producto.precio, 0);
+    alert(`El total de la compra es de $${total}`);
+}
+const calcularTotalButton = document.getElementById("calcular-total");
+calcularTotalButton.addEventListener("click", calcularTotalCarrito);
+
 
 function vaciarCarrito () {
     carrito = [];
@@ -57,23 +65,23 @@ function vaciarCarrito () {
     alert("Esta seguro de vaciar el carrito");
 }
 
-const productosDiv = document.getElementById("productos");
+const productosDeCategorias = document.getElementById("productos");
 
 for (const categoria in productos){
     const categoriaDiv = document.createElement("div");
     categoriaDiv.innerHTML = `
     <h1>${categoria}</h1>
     `;
-    productosDiv.appendChild(categoriaDiv);
+    productosDeCategorias.appendChild(categoriaDiv);
 
     productos[categoria].forEach((productos, productoIndex) => {
-        const productosDiv = document.createElement("div");
-        productosDiv.innerHTML = `
+        const productosDeCategorias = document.createElement("div");
+        productosDeCategorias.innerHTML = `
             <h3>${productos.nombre}</h3>
-            <b>${productos.precio}</b>
+            <b>$${productos.precio}</b>
             <button onclick="agregarAlCarrito('${categoria}', ${productoIndex})">Agregar al Carrito</button>
         `;
-        categoriaDiv.appendChild(productosDiv)
+        categoriaDiv.appendChild(productosDeCategorias)
     });
 };
 
