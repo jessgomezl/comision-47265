@@ -15,7 +15,7 @@
             <nav class="navbar" id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <a class="nav-link" href="#scrollspyHeading1">NOSOTROS</a>
+                        <a class="nav-link" href="../index.html">NOSOTROS</a>
                     </li>
                     <li> 
                         <a href="./productos.html">PRODUCTOS</a>
@@ -33,16 +33,14 @@
         <section>
             <h1>MI CARRITO</h1>
         </section>
-        <div>
+        <div id="carrito">
             
         </div>
-
-        <div>
-            <a class="btn boton-verde" href="/index.html">SEGUIR COMPRANDO</a>
+        <div class="contenedor-botones">
+            <a class="btn boton-verde" href="./productos.html">SEGUIR COMPRANDO</a>
         </div>
-        <div>
-            
-        </div>
+        <button id="vaciarCarrito" >Vaciar Carrito</button>
+        <button  id="calcularTotal" >Calcular Total</button>
     </main>
     <footer>
         <div class="div-footer" >
@@ -60,7 +58,8 @@
             </li>
         </div>
     </footer>
-    <script src="./main.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -78,18 +78,18 @@ div a img{
     margin-left: 5%;
     margin-right: 5%;
 }
-h5{
+.carousel-item h5{
     font-family:'Merriweather', serif;
     font-size: 50px;
 }
-p{
+.carousel-item p{
     font-family: 'Merriweather', serif;
     font-size: 23px;
     word-spacing: 3px;
 }
-img{
-    height: 650px;
-    width: 1400px;
+.carousel-item img{
+    height: 600px;
+    width: 1300px;
 }
 .catalogo{
     margin-bottom: 10px;
@@ -101,33 +101,39 @@ img{
     align-items: center;
     list-style: none;
     background-image: url(./assets/images/banner-2.jpg);
-    background-size: 100% 450px;
+    background-size: 89% 500px;
     background-repeat: no-repeat;
     background-position: center;
+}
+.section-nos{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
 }
 .div-nos{
     background-color: rgb(110, 243, 139);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-        h2{
-            text-align: center;
-            font-family:'Merriweather', serif;
-            font-size: 40px;
-            color: rgb(103, 65, 241);
-            &:hover{
-                color:black;
-                text-decoration: underline;
+}
+.div-nos p{
+    padding: 50px;
+    text-align:justify;
+    font-family:'Merriweather', serif;
+    font-size: 25px;
+    word-spacing: 3px
+}
+.div-nos h2{
+    text-align: center;
+    font-family:'Merriweather', serif;
+    font-size: 40px;
+    color: rgb(103, 65, 241);
+    &:hover{
+        color:black;
+            text-decoration: underline;
             }
-        }
-        p{
-            padding: 50px;
-            text-align:justify;
-            font-family:'Merriweather', serif;
-            font-size: 27px;
-            word-spacing: 3px
-        }
-    }
+}
 .div-img{
     width: 100%;
     height: 700px;
@@ -169,4 +175,26 @@ h2:hover{
 }
 p:hover{
     color:rgba(119, 228, 212, 1) ;
+}
+
+/* main-productos*/
+.main-productos{
+    padding: 30px;
+}
+.col img{
+    height: 250px;
+    width: 316px;
+}
+.productos-container{
+    display: grid;
+    grid-template-columns: repeat(3, 225px);
+    grid-template-rows: repeat(3, 290);
+    column-gap: 250px;
+    row-gap: 10px;
+    justify-content: center;
+}
+.img-producto{
+    padding: 15px;
+    height: 225px;
+    width: 190px;
 }
