@@ -1,242 +1,236 @@
-{
-    "Accesorios": [
+[
     {
-        "id": 1,
+        "id": "accesorios-1",
         "nombre": "abanicos",
         "imagen": "../assets/images/abanico.jpg",
         "precio": 2100
     },
     {
-        "id": 2,
+        "id": "accesorios-2",
         "nombre": "billetera animal print",
         "imagen": "../assets/images/billetera-1.jpg",
         "precio": 2900
     },
     {
-        "id": 3,
+        "id": "accesorios-3",
         "nombre": "billetera negra",
         "imagen": "../assets/images/billetera-2.jpg",
         "precio": 2900
     },
     {
-        "id": 4,
+        "id": "accesorios-4",
         "nombre": "billetera roja",
         "imagen": "../assets/images/billetera-3.jpg",
         "precio": 2900
     },
     {
-        "id": 5,
+        "id": "accesorios-5",
         "nombre": "billetera azul",
         "imagen": "../assets/images/billetera-4.jpg",
         "precio": 2900
     },
     {
-        "id": 6,
+        "id": "accesorios-6",
         "nombre": "billetera chocolate",
         "imagen": "../assets/images/billetera-5.jpg",
         "precio": 2900
     },
     {
-        "id": 7,
+        "id": "accesorios-7",
         "nombre": "billetera cuero",
         "imagen": "../assets/images/billetera-6.jpg",
         "precio": 2900
     },
     {
-        "id": 8,
+        "id": "accesorios-8",
         "nombre": "monedero bordo",
         "imagen": "../assets/images/monedero-1.jpg",
         "precio": 2100
     },
     {
-        "id": 9,
+        "id": "accesorios-9",
         "nombre": "monedero cuerina",
         "imagen": "../assets/images/monedero-2.jpg",
         "precio": 2100
     },
     {
-        "id": 10,
+        "id": "accesorios-10",
         "nombre": "monedero rojo",
         "imagen": "../assets/images/monedero-3.jpg",
         "precio": 2100
     },
     {
-        "id": 11,
+        "id": "accesorios-11",
         "nombre": "organizador",
         "imagen": "../assets/images/organizador.jpg",
         "precio": 2500
     },
     {
-        "id": 12,
+        "id": "accesorios-12",
         "nombre": "organizador de viaje",
-        "imagen": "../assets/images/organizador-de-viaje.jpg",
+        "imagen": "../assets/images/organizadores-de-viaje.jpg",
         "precio": 2500
     },
     {
-        "id": 13,
+        "id": "accesorios-13",
         "nombre": "paraguas lisos",
         "imagen": "../assets/images/paraguas-lisos.jpg",
         "precio": 3100
     },
     {
-        "id": 14,
+        "id": "accesorios-14",
         "nombre": "paraguas estampados",
         "imagen": "../assets/images/paraguas-estampados.jpg",
         "precio": 3100
     },
     {
-        "id": 15,
+        "id": "accesorios-15",
         "nombre": "portacelulares",
         "imagen": "../assets/images/portacelular.jpg",
         "precio": 2700
-    }
-    ],
-    "Belleza": [
+    },
     {
-        "id": 16,
+        "id": "belleza-16",
         "nombre": "brocha pincel",
         "imagen": "../assets/images/brocha-1.jpg",
         "precio": 2700
     },
     {
-        "id": 17,
+        "id": "belleza-17",
         "nombre": "brocha ",
         "imagen": "../assets/images/brocha-2.jpg",
         "precio": 2700
     },
     {
-        "id": 18,
+        "id": "belleza-18",
         "nombre": "brocha",
         "imagen": "../assets/images/brocha-3.jpg",
         "precio": 2700
     },
     {
-        "id": 19,
+        "id": "belleza-19",
         "nombre": "cepillo ",
         "imagen": "../assets/images/cepillo-1.jpg",
         "precio": 2200
     },
     {
-        "id": 20,
+        "id": "belleza-20",
         "nombre": "cepillo cuadrado",
         "imagen": "../assets/images/cepillo-cuadrado.jpg",
         "precio": 2500
     },
     {
-        "id": 21,
+        "id": "belleza-21",
         "nombre": "cepillo redondo",
         "imagen": "../assets/images/cepillo-redondo.jpg",
         "precio": 2500
     },
     {
-        "id": 22,
+        "id": "belleza-22",
         "nombre": "espejos de bolsillo",
         "imagen": "../assets/images/espejo-1.jpg",
         "precio": 2900
     },
     {
-        "id": 23,
+        "id": "belleza-23",
         "nombre": "peine con espejo",
         "imagen": "../assets/images/peine-espejo.jpg",
         "precio": 2900
     },
     {
-        "id": 24,
+        "id": "belleza-24",
         "nombre": "peines",
         "imagen": "../assets/images/peines-1.jpg",
         "precio": 2900
     },
     {
-        "id": 25,
+        "id": "belleza-25",
         "nombre": "peine cola de rata",
         "imagen": "../assets/images/peines-2.jpg",
         "precio": 2900
     },
     {
-        "id": 26,
+        "id": "belleza-26",
         "nombre": "peine ",
         "imagen": "../assets/images/peines-3.jpg",
         "precio": 2900
     },
     {
-        "id": 27,
+        "id": "belleza-27",
         "nombre": "portacosmeticos flor",
         "imagen": "../assets/images/portacosmeticos-1.jpg",
         "precio": 2900
     },
     {
-        "id": 28,
+        "id": "28",
         "nombre": "portacosmeticos abeja",
         "imagen": "../assets/images/portacosmetico-2.jpg",
         "precio": 2900
     },
     {
-        "id": 29,
+        "id": "belleza-29",
         "nombre": "portacosmeticos acua",
         "imagen": "../assets/images/portacosmetico-3.jpg",
         "precio": 2900
     },
     {
-        "id": 30,
+        "id": "belleza-30",
         "nombre": "portacosmeticos flores",
-        "imagen": "../assets/images/portacosmetico4.jpg",
+        "imagen": "../assets/images/portacosmetico.4.jpg",
         "precio": 2900
-    }
-    ],
-    "Manicuría": [
+    },
     {
-        "id": 31,
+        "id": "manicuria-31",
         "nombre": "alicate",
         "imagen": "../assets/images/alicate-1.jpg",
-        "precio": 25
+        "precio": 1890
     },
     {
-        "id": 32,
+        "id": "manicuria-32",
         "nombre": "alicate",
         "imagen": "../assets/images/alicate-2.jpg",
-        "precio": 8
+        "precio": 1890
     },
     {
-        "id": 33,
+        "id": "manicuria-33",
         "nombre": "bloque para uñas",
         "imagen": "../assets/images/bloque-para-uñas-1.jpg",
         "precio": 2900
     },
     {
-        "id": 34,
+        "id": "manicuria-34",
         "nombre": "bloque para uñas",
         "imagen": "../assets/images/bloque-para-uñas-2.jpg",
         "precio": 2900
     },
     {
-        "id": 35,
+        "id": "manicuria-35",
         "nombre": "kit manicuria bebe",
         "imagen": "../assets/images/kit-manicuria-bebe.jpg",
         "precio": 2900
     },
     {
-        "id": 36,
+        "id": "manicuria-36",
         "nombre": "set manicuria de 5 piezas",
         "imagen": "../assets/images/set-manicuria-5-piezas.jpg",
         "precio": 2900
     },
     {
-        "id": 37,
+        "id": "manicuria-37",
         "nombre": "set manicuria de 6 piezas",
         "imagen": "../assets/images/set-manicuria-6-piezas.jpg",
         "precio": 2900
     },
     {
-        "id": 38,
+        "id": "manicuria-38",
         "nombre": "set manicuria de 9 piezas",
         "imagen": "../assets/images/set-manicuria-9-piezas.jpg",
         "precio": 2900
     },
     {
-        "id": 39,
+        "id": "manicuria-39",
         "nombre": "set manicuria de 10 piezas",
         "imagen": "../assets/images/set-manicuria-10-piezas.jpg",
         "precio": 2900
     }
-    ]
-}
+]

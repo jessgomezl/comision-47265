@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tienda de articulos de belleza, cuidado personal y todos los accesorios que necesites al mejor precio">
     <meta name="keywords" content="productos de belleza, accesorios para mujer, productos de cuidado personal">
@@ -20,7 +19,7 @@
                         <a class="nav-link" href="../index.html">NOSOTROS</a>
                     </li>
                     <li> 
-                        <a href="./pages/productos.html">PRODUCTOS</a>
+                        <a href="/pages/productos.html">PRODUCTOS</a>
                     </li>
                     <div>
                         <a href="./carrito.html">
@@ -34,27 +33,30 @@
     <main class="main-productos">
         <div class="container text-center">
             <div class="row">
-                <h2>CATEGORIAS</h2>
                 <div class="col">
-                    <img src="../assets/images/baner-accesorios.jpg" class="img-fluid" alt="banner accesorios">
+                    <button class="filtro" id="accesoriosBtn">
+                        <img src="../assets/images/baner-accesorios.jpg" class="img-fluid" alt="banner accesorios">
+                        <h2 class="nombre-col">ACCESORIOS</h2>
+                    </button>
                 </div>
                 <div class="col">
-                    <img src="../assets/images/carrusel.jpg" class="img-fluid" alt="banner belleza">
+                    <button class="filtro" id="bellezaBtn">
+                        <img src="../assets/images/carrusel.jpg" class="img-fluid" alt="banner belleza">
+                        <h2 class="nombre-col">BELLEZA</h2>
+                    </button>
                 </div>
                 <div class="col">
-                    <img src="../assets/images/banner-nosotros.jpeg" class="img-fluid" alt="banner manicuria">
+                    <button class="filtro" id="manicuriaBtn">
+                        <img src="../assets/images/banner-nosotros.jpeg" class="img-fluid" alt="banner manicuria">
+                        <h2 class="nombre-col">MANICURIA</h2>
+                    </button>
                 </div>
             </div>
         </div>
         <section>
             <h2>CATALOGO COMPLETO</h2>
         </section>
-        <div id="productosContainer" class="productos-container">
-            
-        </div>
-        <div id="agregarAlCarrito" >
-
-        </div>
+        <div id="productos" class="productos-container"></div>
     </main>
     <footer>
         <div class="div-footer" >
@@ -72,8 +74,8 @@
             </li>
         </div>
     </footer>
-    <script src="../js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
