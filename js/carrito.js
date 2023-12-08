@@ -2,21 +2,22 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 function mostrarProductosEnCarrito() {
     const carritoContainer = document.getElementById('carrito-container');
+    if (!carritoContainer) return; 
+
     carritoContainer.innerHTML = '';
 
     carrito.forEach(producto => {
-        const productoElement = document.createElement('div');
-        productoElement.innerHTML = `
-            <p>${producto.nombre}</p>
-            <p>${producto.precio}</p>
-        `;
-        
-        const eliminarBtn = document.createElement('button');
-        eliminarBtn.innerText = 'Eliminar';
-        eliminarBtn.addEventListener('click', () => eliminarDelCarrito(producto.id));
-        
-        productoElement.appendChild(eliminarBtn);
-        carritoContainer.appendChild(productoElement);
+    const productoElement = document.createElement('div');
+    productoElement.innerHTML = `
+        <p>${producto.nombre}</p>
+        <p>${producto.precio}</p>
+    `;
+    const eliminarBtn = document.createElement('button');
+    eliminarBtn.innerText = 'Eliminar';
+    eliminarBtn.addEventListener('click', () => eliminarDelCarrito(producto.id));
+    
+    productoElement.appendChild(eliminarBtn);
+    carritoContainer.appendChild(productoElement);
     });
 }
 function eliminarDelCarrito(id) {
@@ -53,8 +54,9 @@ function vaciarCarrito() {
         confirmButtonText: 'Sí, vaciar carrito'
     }).then((result) => {
         if (result.isConfirmed) {
-            carrito = [];
-            mostrarProductosEnCarrito();
+            carrito = []; 
+            localStorage.removeItem('carrito'); 
+            mostrarProductosEnCarrito(); 
             Swal.fire('¡Carrito vaciado!', '', 'success');
         }
     });

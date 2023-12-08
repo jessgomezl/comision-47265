@@ -1,5 +1,4 @@
 let productos = [];
-let carrito = [];
 
 fetch("../js/data.json")
 .then(response => response.json())
@@ -18,27 +17,17 @@ function mostrarProductos(productosFiltrados) {
             <img class="img-producto" src="${producto.imagen}" alt="${producto.nombre}">
             <h3>${producto.nombre}</h3>
             <b>$${producto.precio}</b>
-            <button onclick="agregarAlCarrito('${producto.id}')">Agregar al Carrito</button>`;
+            `;
+        const botonAgregar = document.createElement("button");
+        botonAgregar.textContent = 'Agregar al Carrito';
+        botonAgregar.addEventListener('click', function() {
+            agregarAlCarrito(producto.id);
+        });
+
+        productoDiv.appendChild(botonAgregar);
         productosDiv.appendChild(productoDiv);
     });
 }
-function agregarAlCarrito(id) {
-    const productoEncontrado = carrito.find(item => item.id === id);
-    const producto = productos.find(item => item.id === id); 
-
-    if (producto && !productoEncontrado) {
-        carrito.push(producto);
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-        mostrarProductosEnCarrito();
-        Swal.fire({
-            title: `¡Agregado al carrito!`,
-            text: `Agregar al carrito \n ${producto.nombre} $${producto.precio}`,
-            icon: 'success',
-            confirmButtonText: 'OK'
-        });
-    }
-}
-
     const accesoriosBtn = document.getElementById("accesoriosBtn");
     const bellezaBtn = document.getElementById("bellezaBtn");
     const manicuriaBtn = document.getElementById("manicuriaBtn");
@@ -57,3 +46,22 @@ function agregarAlCarrito(id) {
         const productosManicuria = productos.filter(producto => producto.id.startsWith("manicuria"));
         mostrarProductos(productosManicuria);
     });
+
+function agregarAlCarrito(idProducto) {
+    const productoSeleccionado = productos.find(producto => producto.id === idProducto);
+    if (productoSeleccionado) {
+        Swal.fire({
+            title: `¡Producto agregado al carrito!`,
+            text: `Agregar al carrito \n ${productoSeleccionado.nombre} $${productoSeleccionado.precio}`,
+            icon: 'success'
+        }).then((result) => {
+            if (result.isConfirmed) {
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            carrito.push(productoSeleccionado);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            mostrarProductosEnCarrito();
+            }
+        });
+    }
+}
+
